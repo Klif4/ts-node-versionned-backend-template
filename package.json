@@ -1,6 +1,6 @@
 {
   "name": "ts-node-versionned-backend-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Node TypeScript backend template with hexagonal architecture",
   "main": "dist/index.js",
   "engines": {

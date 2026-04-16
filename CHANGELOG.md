@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.1.0 - 2026-04-16
+#### Features
+- test - (896aa01) - Klif
+- Set package json version on release - (b31f8b5) - Klif
+- Setup node project with unit tests and BDD - (31580c0) - Klif
+- Initial commit - (5b0a691) - Klif4
+
+- - -
+
 ## 0.1.0 - 2026-03-10
 #### Bug Fixes
 - release workflow, bump version - (83cda65) - Klif
