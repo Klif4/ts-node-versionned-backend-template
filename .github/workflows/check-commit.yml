@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Important : tout l'historique pour cog
+          fetch-depth: 2
 
       - name: Install Cocogitto
         uses: cocogitto/cocogitto-action@v3
 
       - name: Validate commits
-        run: cog check
+        run: cog check ${{ github.event.before }}..${{ github.sha }}
 
   test:
     runs-on: ubuntu-latest
