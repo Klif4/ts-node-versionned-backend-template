@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install Cocogitto
+        uses: cocogitto/cocogitto-action@v3
+
+      - name: Validate commits
+        run: cog check ${{ github.event.before }}..${{ github.sha }}
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          # tes commandes de test ici
+          echo "Tests OK"
