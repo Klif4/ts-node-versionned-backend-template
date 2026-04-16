@@ -15,6 +15,7 @@ describe("GetUniqueProductNamesUseCase", () => {
       ])
     );
 
+
     const names = await new GetUniqueProductNamesUseCase(repository).execute();
 
     expect(names.size).toBe(2);
