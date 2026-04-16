@@ -29,6 +29,13 @@ jobs:
           cog bump --auto
           echo "tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
 
+      - name: Update package.json version
+        run: |
+          VERSION=$(git describe --tags --abbrev=0 | sed 's/^v//')
+          npm version $VERSION --no-git-tag-version
+          git add package.json
+          git commit --amend --no-edit
+
       - name: Push tag
         run: git push --follow-tags
 
