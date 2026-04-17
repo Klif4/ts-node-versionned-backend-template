@@ -1,0 +1,23 @@
+{
+  "skill_name": "bdd-example-mapping",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Je veux créer une feature BDD pour la fonctionnalité de remboursement d'un abonnement. L'utilisateur peut demander un remboursement dans les 14 jours suivant l'achat, mais seulement si aucune session n'a été consommée. Le remboursement est intégral. Il n'y a pas d'autres features existantes dans le projet.",
+      "expected_output": "One file generated: subscription_refund.feature (Gherkin in English, with Rule: keyword, realistic persona names, declarative style). The session should include a user story reformulation and at least one probe for edge cases before generating the file.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to write a .feature file for our loyalty points system. Customers earn 1 point per euro spent and can redeem 100 points for a €5 discount. Points expire after 12 months of inactivity. There are no existing .feature files in this project.",
+      "expected_output": "One file generated: loyalty_points.feature (Gherkin in English with multiple Rule: sections for earning, redeeming, and expiry rules). Should include nominal, edge case, and error scenarios per rule. Steps must be declarative business-level, not technical. Test data must be realistic (real names, amounts, dates).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Here's our existing cart feature file at /tmp/bdd-eval-fixtures/cart.feature. I want to add scenarios for when an item goes out of stock while it's in someone's cart — what should happen when the customer tries to checkout?",
+      "expected_output": "Claude reads and summarises the existing cart.feature, then guides through discovery of the out-of-stock-at-checkout rules. Generates one .feature file that reuses persona names and style conventions from the existing file. Should not break or contradict existing scenarios.",
+      "files": ["evals/files/cart.feature"]
+    }
+  ]
+}
