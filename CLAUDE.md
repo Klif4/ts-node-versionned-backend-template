@@ -50,6 +50,14 @@ Full rules live in `.claude/rules/typescript-style.md`. Key points:
 - Named exports only — no default exports
 - Explicit return types on all functions
 
+## New project setup
+
+When starting a new project from this template, rename the project in `package.json`:
+
+```bash
+npm pkg set name="<your-project-name>"
+```
+
 ## Versioning & commits
 
 Commits on `master` must follow [Conventional Commits](https://www.conventionalcommits.org/) — enforced by a `cog verify` git hook (cocogitto). Commits on other branches skip validation.
